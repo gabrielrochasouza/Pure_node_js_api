@@ -9,6 +9,11 @@ import { login } from './services/users/login.service.js';
 export const routes = [
     {
         method: 'GET',
+        path: buildRoutePath('/'),
+        handler: (req,res) => res.end('App is running 🎉')
+    },
+    {
+        method: 'GET',
         path: buildRoutePath('/users/:id'),
         handler: (req,res) => getOneUsers(req, res)
     },

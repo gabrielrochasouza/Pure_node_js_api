@@ -74,10 +74,11 @@ PUT http://localhost:3000/users/:id
 Content-Type: application/json
 ```
 {
-    "name": "Ryan Dahl",
-    "email": "ryan@gmail.com"
+    "name": "Ryan Dhawl",
+    "email": "ryan@gmail.com",
+    "password": "12345"
 }
 ```
 
-### Create new user
+### Delete user
 DELETE http://localhost:3000/users/:id

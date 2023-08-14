@@ -1,5 +1,4 @@
 import { decryptPassword } from '../utils/decryptPassword.js'
-import { encryptPassword } from '../utils/encryptPassword.js'
 
 const commonHeaders = {
     "Content-type": "application/json"

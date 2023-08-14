@@ -17,9 +17,10 @@ export async function login(req, res) {
     ) {
         return
     }
+    const user = users.find(user => user.email === req.body.email)
     const response = {
         message: "Login bem sucedido",
-        token: randomBytes(32).toString("hex"),
+        token: user.tokenKey,
     }
     return res.writeHead(200, 'Login feito', commonHeaders).end(JSON.stringify(response))
 }

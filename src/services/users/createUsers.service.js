@@ -1,4 +1,4 @@
-import { randomUUID } from 'node:crypto'
+import { randomBytes, randomUUID } from 'node:crypto'
 import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
 import { uniqueEmailRequiredMiddleware } from '../../middlewares/uniqueEmailRequired.js';
@@ -29,6 +29,7 @@ export async function createUsers(req, res) {
         password: encryptedPassword.encryptedData,
         createdAt: new Date(),
         updatedAt: null,
+        tokenKey: randomBytes(32).toString('hex')
     }
 
     database.insert('users', newUser)

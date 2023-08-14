@@ -8,7 +8,7 @@ Content-Type: application/json
 
 
 ### Show one user
-GET http://localhost:3000/users/89c1162e-03e3-4dc6-801f-d6513e97a718
+GET http://localhost:3000/users/11c27e1a-7cd7-4baf-b106-83f1e260cb4a
 Content-Type: application/json
 
 
@@ -22,31 +22,32 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "email": "nicola.tesla@gmail.com",
-    "name": "Nicola Tesla",
-    "password": "12345678"
+    "email": "teste@gmail.com",
+    "name": "teste",
+    "password": "12345678dfgdfgdfgfdgfdgdfgdfgdfgdfg"
 }
 
 
 ### Login
-POST http://localhost:3000/login
+POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "email": "renan.play@gmail.com",
-    "password": "12345678"
+    "email": "mulan@gmail.com",
+    "password": "12345678dfgdfgdfgfdgfdgdfgdfgdfgdfg"
 }
 
 
 ### Update user
-PUT http://localhost:3000/users/68e355fb-08e1-42fd-b00a-5f1196f78b8c
+PUT http://localhost:3000/users/11c27e1a-7cd7-4baf-b106-83f1e260cb4a
 Content-Type: application/json
 
 {
     "name": "Ryan Dhawl",
-    "email": "ryan@gmail.com"
+    "email": "ryan@gmail.com",
+    "password": "12345"
 }
 
 
-### Create new user
-DELETE http://localhost:3000/users/bae60508-c777-4b6a-a417-8a6ad1ebe001
+### Delete user
+DELETE http://localhost:3000/users/d3120fd4-bbe4-4206-b43e-a6469122261b

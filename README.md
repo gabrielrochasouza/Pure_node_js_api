@@ -2,7 +2,7 @@
 
  This is an api made without any libraries, all http methods were made using pure node
 
- It is necessary use the LTS node version to run this project.
+ It is recommended use the LTS node version to run this project.
 
  CLI Command to start the api:
  ```
@@ -24,6 +24,8 @@
  # Routes of the API
 
  It was set to run on the port 3000, but feel free to change if you like.
+
+ <a href="https://pure-node-crud-application.onrender.com/">Link of the API deployed on render</a>
 
 ### Show all users
 GET http://localhost:3000/users

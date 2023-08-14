@@ -1,4 +1,4 @@
-### Show all users
+### App is working message
 GET http://localhost:3000
 Content-Type: application/json
 
@@ -8,7 +8,7 @@ Content-Type: application/json
 
 
 ### Show one user
-GET http://localhost:3000/users/b8816d8-63a7-49e1-8d00-05db15b09fb1
+GET http://localhost:3000/users/89c1162e-03e3-4dc6-801f-d6513e97a718
 Content-Type: application/json
 
 

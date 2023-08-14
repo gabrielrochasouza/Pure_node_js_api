@@ -1,7 +1,6 @@
-import Database from '../../database/database.js'
+import database from '../../database/database.js'
 import { arrayObjectPasswordFilter } from '../../utils/mappers.js';
 
-const database = new Database();
 
 const commonHeaders = {
     "Content-type": "application/json"

@@ -15,6 +15,14 @@
             "password": "92f9914f1f3b2c8d51c0d58cb0fbffb9",
             "createdAt": "2023-08-14T01:20:25.958Z",
             "updatedAt": "2023-08-14T01:25:49.279Z"
+        },
+        {
+            "id": "fac04b92-c634-4d83-b144-4042c01576c3",
+            "name": "Nicola Tesla",
+            "email": "nicola.tesla@gmail.com",
+            "password": "92f9914f1f3b2c8d51c0d58cb0fbffb9",
+            "createdAt": "2023-08-14T03:21:29.802Z",
+            "updatedAt": null
         }
     ]
 }

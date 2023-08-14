@@ -1,7 +1,5 @@
-import Database from '../../database/database.js'
+import database from '../../database/database.js'
 import { userNotFound } from '../../middlewares/userNotFound.js';
-
-const database = new Database();
 
 const commonHeaders = {
     "Content-type": "application/json"

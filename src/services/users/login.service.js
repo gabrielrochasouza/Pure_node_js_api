@@ -1,10 +1,8 @@
 import { randomBytes } from 'node:crypto'
-import Database from '../../database/database.js'
+import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
 import { verifyEmail } from '../../middlewares/verifyEmail.js';
 import { validateLoginMiddleware } from '../../middlewares/validateLogin.js';
-
-const database = new Database();
 
 const commonHeaders = {
     "Content-type": "application/json"

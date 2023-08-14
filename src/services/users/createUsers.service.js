@@ -1,12 +1,10 @@
 import { randomUUID } from 'node:crypto'
-import Database from '../../database/database.js'
+import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
 import { uniqueEmailRequiredMiddleware } from '../../middlewares/uniqueEmailRequired.js';
 import { verifyEmail } from '../../middlewares/verifyEmail.js';
 import { encryptPassword } from '../../utils/encryptPassword.js';
 import { objectPasswordFilter } from '../../utils/mappers.js';
-
-const database = new Database();
 
 const commonHeaders = {
     "Content-type": "application/json"

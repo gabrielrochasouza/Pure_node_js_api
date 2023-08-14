@@ -9,37 +9,44 @@ import { login } from './services/users/login.service.js';
 export const routes = [
     {
         method: 'GET',
-        path: buildRoutePath('/'),
+        path: '/',
+        buildRoutePath: buildRoutePath('/'),
         handler: (req,res) => res.end('App is running 🎉')
     },
     {
         method: 'GET',
-        path: buildRoutePath('/users/:id'),
+        path: '/users/:id',
+        buildRoutePath: buildRoutePath('/users/:id'),
         handler: (req,res) => getOneUsers(req, res)
     },
     {
         method: 'GET',
-        path: buildRoutePath('/users'),
+        path: '/users',
+        buildRoutePath: buildRoutePath('/users'),
         handler: (req,res) => getUsers(req, res)
     },
     {
         method: 'POST',
-        path: buildRoutePath('/users'),
+        path: '/users',
+        buildRoutePath: buildRoutePath('/users'),
         handler: (req,res) => createUsers(req,res)
     },
     {
         method: 'POST',
-        path: buildRoutePath('/login'),
+        path: '/login',
+        buildRoutePath: buildRoutePath('/login'),
         handler: (req,res) => login(req,res)
     },
     {
         method: 'DELETE',
-        path: buildRoutePath('/users/:id'),
+        path: '/users/:id',
+        buildRoutePath: buildRoutePath('/users/:id'),
         handler: (req,res) => deleteUsers(req, res)
     },
     {
         method: 'PUT',
-        path: buildRoutePath('/users/:id'),
+        path: '/users/:id',
+        buildRoutePath: buildRoutePath('/users/:id'),
         handler: (req,res) => updateUsers(req, res)
     },
 ]

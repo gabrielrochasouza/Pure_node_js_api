@@ -44,15 +44,42 @@
             "createdAt": "2023-08-14T04:07:02.924Z",
             "updatedAt": "2023-08-14T04:08:23.131Z",
             "tokenKey": "a7189d5e950ccd56bc5b905a3b1570192348fe04a9a5139c5a16662381e6ccba"
+        },
+        {
+            "id": "f52bd1b2-a0e0-4d42-8e03-ad84929886eb",
+            "name": "Dave Dev",
+            "email": "dave.dev@gmail.com",
+            "password": "ffc0caaf656d9ec2db1d3968e4e294aa",
+            "createdAt": "2023-08-14T15:00:39.785Z",
+            "updatedAt": null,
+            "tokenKey": "193bf3e0c45036b0863ab770bca8ebc3c3f8e03ac3a602002c7fb3a91cc83bb943355a033a37a3463d2412a6ee97daec"
+        },
+        {
+            "id": "13bb63cb-a462-4093-b801-4bff8f2db48f",
+            "name": "Mark Zuckerberg",
+            "email": "mark@gmail.com",
+            "password": "92f9914f1f3b2c8d51c0d58cb0fbffb9",
+            "createdAt": "2023-08-14T15:06:02.563Z",
+            "updatedAt": "2023-08-14T15:08:33.721Z",
+            "tokenKey": "9fdda33b64926d936b2fc6317fbb572e11d4d0e087b1de474919ee226fb8a9efb180b5cd9ebe58d2825eeff58edb2f2c"
+        },
+        {
+            "id": "6bda6a87-52f2-43b0-aad2-93c0a9ffd30b",
+            "name": "teste",
+            "email": "teste4@gmail.com",
+            "password": "92f9914f1f3b2c8d51c0d58cb0fbffb9",
+            "createdAt": "2023-08-14T15:17:38.312Z",
+            "updatedAt": null,
+            "tokenKey": "08382a2d202669043de866f0281bb8dd4a4d5674501a2b7754f4c7cbf1c626e507d3d2c0d52b193be5bc0721979520ad"
         }
     ],
     "tasks": [
         {
             "id": "788c69e4-5cc9-4778-a74a-468386c8eed4",
-            "title": "Título teste",
-            "description": "Descrição teste",
+            "title": "Updated",
+            "description": "Updated description",
             "createdAt": "2023-08-14T14:02:53.627Z",
-            "updatedAt": null,
+            "updatedAt": "2023-08-14T15:18:44.310Z",
             "completedAt": null
         },
         {
@@ -70,6 +97,14 @@
             "createdAt": "2023-08-14T14:21:48.714Z",
             "updatedAt": "2023-08-14T14:22:05.138Z",
             "completedAt": "2023-08-14T14:22:05.138Z"
+        },
+        {
+            "id": "f0dcd3bc-0658-4cff-8cf4-b0e777c707d6",
+            "title": "Testando",
+            "description": "Testando descrição",
+            "createdAt": "2023-08-14T15:17:56.759Z",
+            "updatedAt": null,
+            "completedAt": null
         }
     ]
 }

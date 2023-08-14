@@ -1,20 +1,16 @@
-import { randomBytes, randomUUID } from 'node:crypto'
+import { randomUUID } from 'node:crypto'
 import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
-import { uniqueEmailRequiredMiddleware } from '../../middlewares/uniqueEmailRequired.js';
+import { uniqueFieldRequiredMiddleware } from '../../middlewares/uniqueFieldRequiredMiddleware.js';
 import { verifyEmail } from '../../middlewares/verifyEmail.js';
 import { encryptPassword } from '../../utils/encryptPassword.js';
 import { objectPasswordFilter } from '../../utils/mappers.js';
-
-const commonHeaders = {
-    "Content-type": "application/json"
-}
 
 export async function createUsers(req, res) {
     const users = await database.select("users")
     if(
         requiredFieldsMiddleware(req, res, ["name", "email", "password"]) ||
-        uniqueEmailRequiredMiddleware(req, res, users) ||
+        uniqueFieldRequiredMiddleware(req, res, users, "email") ||
         verifyEmail(req, res)
     ) {
         return
@@ -22,17 +18,19 @@ export async function createUsers(req, res) {
 
     const encryptedPassword = encryptPassword(req.body?.password)
 
+    const id = randomUUID()
+
     const newUser = {
-        id: randomUUID(),
+        id,
         name: req.body?.name,
         email: req.body?.email,
-        password: encryptedPassword.encryptedData,
+        password: encryptedPassword,
         createdAt: new Date(),
         updatedAt: null,
-        tokenKey: randomBytes(32).toString('hex')
+        tokenKey: encryptPassword(id)
     }
 
     database.insert('users', newUser)
 
-    return res.writeHead(201, 'User created', commonHeaders).end(JSON.stringify(objectPasswordFilter(newUser) ))
+    return res.writeHead(201, 'User created', {'Content-type': 'application/json'}).end(JSON.stringify(objectPasswordFilter(newUser) ))
 }

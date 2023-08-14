@@ -1,9 +1,5 @@
 import { decryptPassword } from '../utils/decryptPassword.js'
 
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export function validateLoginMiddleware (req, res, users) {
     const { email } = req.body
 
@@ -15,7 +11,7 @@ export function validateLoginMiddleware (req, res, users) {
     const user = users.find(user => user.email === email)
     
     if(!user) { 
-        res.writeHead(400, "Credenciais inválidas", commonHeaders)
+        res.writeHead(400, "Credenciais inválidas", {'Content-type': 'application/json'})
             .end(JSON.stringify(response))
         return true
     }
@@ -23,7 +19,7 @@ export function validateLoginMiddleware (req, res, users) {
     const passwordFound = decryptPassword(user.password)
 
     if(passwordFound !== req.body?.password) {
-        res.writeHead(400, "Credenciais inválidas", commonHeaders)
+        res.writeHead(400, "Credenciais inválidas", {'Content-type': 'application/json'})
             .end(JSON.stringify(response))
         return true
     }

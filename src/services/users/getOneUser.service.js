@@ -3,10 +3,6 @@ import { entityNotFound } from '../../middlewares/entityNotFound.js';
 import { objectPasswordFilter } from '../../utils/mappers.js';
 
 
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export async function getOneUsers (req, res) {
     const { id } = req.params
     const users = await database.select('users');
@@ -17,6 +13,6 @@ export async function getOneUsers (req, res) {
     ) {
         return
     }
-    res.writeHead(200, 'Read One', commonHeaders)
+    res.writeHead(200, 'Read One', {'Content-type': 'application/json'})
     return res.end(JSON.stringify(objectPasswordFilter(user)))
 }

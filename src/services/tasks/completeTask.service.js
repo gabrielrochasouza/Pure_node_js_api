@@ -1,10 +1,6 @@
 import database from '../../database/database.js'
 import { entityNotFound } from '../../middlewares/entityNotFound.js';
 
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export async function completeTask (req, res) {
     const { id } = req.params
 
@@ -24,5 +20,5 @@ export async function completeTask (req, res) {
     }
     await database.update('tasks', id, updatedTask)
 
-    return res.writeHead(200, "Task completed", commonHeaders).end(JSON.stringify(updatedTask))
+    return res.writeHead(200, "Task completed", {'Content-type': 'application/json'}).end(JSON.stringify(updatedTask))
 }

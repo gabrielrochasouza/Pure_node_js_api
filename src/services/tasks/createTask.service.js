@@ -1,14 +1,14 @@
 import { randomUUID } from 'node:crypto'
 import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
-
-const commonHeaders = {
-    "Content-type": "application/json"
-}
+import { uniqueFieldRequiredMiddleware } from '../../middlewares/uniqueFieldRequiredMiddleware.js';
 
 export async function createTasks(req, res) {
+    const tasks = await database.select('tasks');
+
     if(
-        requiredFieldsMiddleware(req, res, ["title", "description"])
+        requiredFieldsMiddleware(req, res, ["title", "description"]) ||
+        uniqueFieldRequiredMiddleware(req, res, tasks, "title")
     ) {
         return
     }
@@ -24,5 +24,5 @@ export async function createTasks(req, res) {
 
     database.insert('tasks', newTask)
 
-    return res.writeHead(201, 'Task created', commonHeaders).end(JSON.stringify(newTask))
+    return res.writeHead(201, 'Task created', {'Content-type': 'application/json'}).end(JSON.stringify(newTask))
 }

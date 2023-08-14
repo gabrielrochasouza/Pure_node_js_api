@@ -1,10 +1,6 @@
 import database from '../../database/database.js'
 import { entityNotFound } from '../../middlewares/entityNotFound.js';
 
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export async function deleteTask (req, res) {
     const { id } = req.params
 
@@ -18,5 +14,5 @@ export async function deleteTask (req, res) {
 
     database.delete('tasks', id)
 
-    return res.writeHead(204, "Task deleted", commonHeaders).end()
+    return res.writeHead(204, "Task deleted", {'Content-type': 'application/json'}).end()
 }

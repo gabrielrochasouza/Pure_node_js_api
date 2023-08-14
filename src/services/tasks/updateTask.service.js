@@ -1,10 +1,7 @@
 import database from '../../database/database.js'
 import { entityNotFound } from '../../middlewares/entityNotFound.js';
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
-
-const commonHeaders = {
-    "Content-type": "application/json"
-}
+import { uniqueFieldRequiredMiddleware } from '../../middlewares/uniqueFieldRequiredMiddleware.js';
 
 export async function updateTask (req, res) {
     const { id } = req.params
@@ -13,7 +10,8 @@ export async function updateTask (req, res) {
     
     if(
         entityNotFound(req, res, tasks) ||
-        requiredFieldsMiddleware(req, res, ['title', 'description'])
+        requiredFieldsMiddleware(req, res, ['title', 'description']) ||
+        uniqueFieldRequiredMiddleware(req, res, tasks, "title")
     ) {
         return
     }
@@ -26,5 +24,5 @@ export async function updateTask (req, res) {
     }
     await database.update('tasks', id, updatedTask)
 
-    return res.writeHead(200, "Task updated", commonHeaders).end(JSON.stringify(updatedTask))
+    return res.writeHead(200, "Task updated", {'Content-type': 'application/json'}).end(JSON.stringify(updatedTask))
 }

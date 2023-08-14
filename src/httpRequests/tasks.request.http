@@ -29,7 +29,7 @@ Content-Type: application/json
 
 
 ### Update task
-PUT http://localhost:3000/tasks/6707b84a-5811-4d06-bb03-76f65afd6afe
+PUT http://localhost:3000/tasks/788c69e4-5cc9-4778-a74a-468386c8eed4
 Content-Type: application/json
 
 {

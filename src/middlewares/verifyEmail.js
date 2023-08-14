@@ -1,7 +1,3 @@
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export function verifyEmail (req, res) {
     const { email } = req.body
 
@@ -13,7 +9,7 @@ export function verifyEmail (req, res) {
             "message": "Invalid email",
         }
 
-        res.writeHead(400, 'Invalid Email', commonHeaders)
+        res.writeHead(400, 'Invalid Email', {'Content-type': 'application/json'})
             .end(JSON.stringify(response))
         return true
     }

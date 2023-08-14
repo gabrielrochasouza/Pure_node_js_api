@@ -18,13 +18,13 @@ Content-Type: application/json
 
 
 ### Create new user
-POST http://localhost:3000/users
+POST http://localhost:3000/users/
 Content-Type: application/json
 
 {
-    "email": "teste@gmail.com",
+    "email": "teste4@gmail.com",
     "name": "teste",
-    "password": "12345678dfgdfgdfgfdgfdgdfgdfgdfgdfg"
+    "password": "12345678"
 }
 
 
@@ -33,21 +33,21 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "email": "mulan@gmail.com",
-    "password": "12345678dfgdfgdfgfdgfdgdfgdfgdfgdfg"
+    "email": "teste2@gmail.com",
+    "password": "12345678"
 }
 
 
 ### Update user
-PUT http://localhost:3000/users/11c27e1a-7cd7-4baf-b106-83f1e260cb4a
+PUT http://localhost:3000/users/13bb63cb-a462-4093-b801-4bff8f2db48f
 Content-Type: application/json
 
 {
-    "name": "Ryan Dhawl",
-    "email": "ryan@gmail.com",
+    "name": "Mark Zuckerberg",
+    "email": "mark@gmail.com",
     "password": "12345"
 }
 
 
 ### Delete user
-DELETE http://localhost:3000/users/d3120fd4-bbe4-4206-b43e-a6469122261b
+DELETE http://localhost:3000/users/d6b9aea0-ae63-4966-90fa-02c427da1492

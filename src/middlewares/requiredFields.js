@@ -1,7 +1,3 @@
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export function requiredFieldsMiddleware (req, res, fieldsRequired) {
     const arrayOfFields = Object.entries(req.body)
         .filter(obj => fieldsRequired.includes(obj[0]))
@@ -19,7 +15,7 @@ export function requiredFieldsMiddleware (req, res, fieldsRequired) {
             "missingFields": missingFields,
             "fieldsInBlanck": fieldsInBlanck
         }
-        res.writeHead(400, 'Fields required', commonHeaders)
+        res.writeHead(400, 'Fields required', {'Content-type': 'application/json'})
             .end(JSON.stringify(response))
         return true
     }

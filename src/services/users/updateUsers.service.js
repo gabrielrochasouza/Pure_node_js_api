@@ -1,13 +1,10 @@
 import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
-import { uniqueEmailRequiredMiddleware } from '../../middlewares/uniqueEmailRequired.js';
+import { uniqueFieldRequiredMiddleware } from '../../middlewares/uniqueFieldRequiredMiddleware.js';
 import { entityNotFound } from '../../middlewares/entityNotFound.js';
 import { verifyEmail } from '../../middlewares/verifyEmail.js';
 import { objectPasswordFilter } from '../../utils/mappers.js';
 
-const commonHeaders = {
-    "Content-type": "application/json"
-}
 
 export async function updateUsers (req, res) {
     const { id } = req.params
@@ -18,9 +15,9 @@ export async function updateUsers (req, res) {
     
     if(
         requiredFieldsMiddleware(req, res, ["name", "email", "password"]) ||
-        uniqueEmailRequiredMiddleware(req, res, users) ||
-        verifyEmail(req, res) ||
-        entityNotFound(req, res, users)
+        entityNotFound(req, res, users) ||
+        uniqueFieldRequiredMiddleware(req, res, users, "email") ||
+        verifyEmail(req, res)
     ) {
         return
     }
@@ -37,5 +34,5 @@ export async function updateUsers (req, res) {
         updatedAt: new Date(),
     }
 
-    return res.writeHead(200, "Update User", commonHeaders).end(JSON.stringify(objectPasswordFilter(updatedUser)))
+    return res.writeHead(200, "Update User", {'Content-type': 'application/json'}).end(JSON.stringify(objectPasswordFilter(updatedUser)))
 }

@@ -4,10 +4,6 @@ import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
 import { verifyEmail } from '../../middlewares/verifyEmail.js';
 import { validateLoginMiddleware } from '../../middlewares/validateLogin.js';
 
-const commonHeaders = {
-    "Content-type": "application/json"
-}
-
 export async function login(req, res) {
     const users = await database.select("users")
     if(
@@ -22,5 +18,5 @@ export async function login(req, res) {
         message: "Login bem sucedido",
         token: user.tokenKey,
     }
-    return res.writeHead(200, 'Login feito', commonHeaders).end(JSON.stringify(response))
+    return res.writeHead(200, 'Login feito', {'Content-type': 'application/json'}).end(JSON.stringify(response))
 }

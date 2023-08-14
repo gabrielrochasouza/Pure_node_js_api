@@ -72,7 +72,7 @@ PUT http://localhost:3000/users/:id
 Content-Type: application/json
 ```
 {
-    "name": "Ryan Dhawl",
+    "name": "Ryan Dahl",
     "email": "ryan@gmail.com"
 }
 ```

@@ -1,0 +1,48 @@
+### Show all users
+GET http://localhost:3000/users
+Content-Type: application/json
+
+
+### Show one user
+GET http://localhost:3000/users/b8816d8-63a7-49e1-8d00-05db15b09fb1
+Content-Type: application/json
+
+
+### Search for users
+GET http://localhost:3000/users/
+Content-Type: application/json
+
+
+### Create new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "nicola.tesla@gmail.com",
+    "name": "Nicola Tesla",
+    "password": "12345678"
+}
+
+
+### Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "renan.play@gmail.com",
+    "password": "12345678"
+}
+
+
+### Update user
+PUT http://localhost:3000/users/68e355fb-08e1-42fd-b00a-5f1196f78b8c
+Content-Type: application/json
+
+{
+    "name": "Ryan Dhawl",
+    "email": "ryan@gmail.com"
+}
+
+
+### Create new user
+DELETE http://localhost:3000/users/bae60508-c777-4b6a-a417-8a6ad1ebe001

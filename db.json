@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "id": "89c1162e-03e3-4dc6-801f-d6513e97a718",
+            "name": "Update",
+            "email": "update@gmail.com",
+            "password": "92f9914f1f3b2c8d51c0d58cb0fbffb9",
+            "createdAt": "2023-08-14T01:13:59.631Z",
+            "updatedAt": "2023-08-14T01:14:56.800Z"
+        },
+        {
+            "id": "68e355fb-08e1-42fd-b00a-5f1196f78b8c",
+            "name": "Ryan Dhawl",
+            "email": "ryan@gmail.com",
+            "password": "92f9914f1f3b2c8d51c0d58cb0fbffb9",
+            "createdAt": "2023-08-14T01:20:25.958Z",
+            "updatedAt": "2023-08-14T01:25:49.279Z"
+        }
+    ]
+}

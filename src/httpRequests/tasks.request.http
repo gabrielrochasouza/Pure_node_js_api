@@ -33,7 +33,7 @@ PUT http://localhost:3000/tasks/788c69e4-5cc9-4778-a74a-468386c8eed4
 Content-Type: application/json
 
 {
-    "title": "Updated",
+    "title": "Testing PUT method",
     "description": "Updated description"
 }
 

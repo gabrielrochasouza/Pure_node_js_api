@@ -39,15 +39,15 @@ Content-Type: application/json
 
 
 ### Update user
-PUT http://localhost:3000/users/13bb63cb-a462-4093-b801-4bff8f2db48f
+PUT http://localhost:3000/users/a63e1ea1-bb09-4c7b-b851-255169ce3c3b
 Content-Type: application/json
 
 {
-    "name": "Mark Zuckerberg",
+    "name": "Mark Zuckerberg 2",
     "email": "mark@gmail.com",
     "password": "12345"
 }
 
 
 ### Delete user
-DELETE http://localhost:3000/users/d6b9aea0-ae63-4966-90fa-02c427da1492
+DELETE http://localhost:3000/users/6bda6a87-52f2-43b0-aad2-93c0a9ffd30b

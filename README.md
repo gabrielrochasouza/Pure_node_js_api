@@ -27,28 +27,26 @@
 
  <a href="https://pure-node-crud-application.onrender.com/">Link of the API deployed on render</a>
 
-### Show all users
-GET http://localhost:3000/users
+## /users
 
-Content-Type: application/json
-
-
-### Show one user
-GET http://localhost:3000/users/:id
-
-Content-Type: application/json
+#### Show all users
+- GET /users
 
 
-### Search for users
-GET http://localhost:3000/users/
 
-Content-Type: application/json
+#### Show one user
+- GET /users/:id
 
 
-### Create new user
-POST http://localhost:3000/users
 
-Content-Type: application/json
+#### Search for users
+- GET /users/
+  
+
+
+#### Create new user
+- POST /users
+
 ```
 {
     "email": "nicola.tesla@gmail.com",
@@ -57,10 +55,9 @@ Content-Type: application/json
 }
 ```
 
-### Login
-POST http://localhost:3000/login
+#### Login
+- POST /login
 
-Content-Type: application/json
 ```
 {
     "email": "renan.play@gmail.com",
@@ -68,10 +65,9 @@ Content-Type: application/json
 }
 ```
 
-### Update user
-PUT http://localhost:3000/users/:id
+#### Update user
+- PUT /users/:id
 
-Content-Type: application/json
 ```
 {
     "name": "Ryan Dhawl",
@@ -80,5 +76,44 @@ Content-Type: application/json
 }
 ```
 
-### Delete user
-DELETE http://localhost:3000/users/:id
+#### Delete user
+- DELETE /users/:id
+
+## /tasks
+
+#### Show all tasks
+- GET /tasks/
+
+
+
+#### Show one task
+- GET /tasks/:id
+
+
+
+#### Create new task
+- POST /tasks
+
+```
+{
+    "title": "Título teste 2",
+    "description": "Descrição teste"
+}
+```
+
+#### Complete task
+- PATCH /tasks/:id/complete
+
+
+#### Update task
+- PUT /tasks/:id
+```
+{
+    "title": "Updated",
+    "description": "Updated description"
+}
+```
+
+#### Delete task
+- DELETE /tasks/:id
+

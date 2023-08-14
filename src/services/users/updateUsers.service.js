@@ -1,7 +1,7 @@
 import database from '../../database/database.js'
 import { requiredFieldsMiddleware } from '../../middlewares/requiredFields.js';
 import { uniqueEmailRequiredMiddleware } from '../../middlewares/uniqueEmailRequired.js';
-import { userNotFound } from '../../middlewares/userNotFound.js';
+import { entityNotFound } from '../../middlewares/entityNotFound.js';
 import { verifyEmail } from '../../middlewares/verifyEmail.js';
 import { objectPasswordFilter } from '../../utils/mappers.js';
 
@@ -20,7 +20,7 @@ export async function updateUsers (req, res) {
         requiredFieldsMiddleware(req, res, ["name", "email", "password"]) ||
         uniqueEmailRequiredMiddleware(req, res, users) ||
         verifyEmail(req, res) ||
-        userNotFound(req, res, users)
+        entityNotFound(req, res, users)
     ) {
         return
     }

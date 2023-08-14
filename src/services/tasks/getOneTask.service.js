@@ -7,16 +7,16 @@ const commonHeaders = {
     "Content-type": "application/json"
 }
 
-export async function getOneUsers (req, res) {
+export async function getOneTask (req, res) {
     const { id } = req.params
-    const users = await database.select('users');
-    const user = users.find(user => user.id === id)
-
+    const tasks = await database.select('tasks');
     if(
-        entityNotFound(req, res, users)
+        entityNotFound(req, res, tasks)
     ) {
         return
     }
+    const task = tasks.find(t => t.id === id)
+
     res.writeHead(200, 'Read One', commonHeaders)
-    return res.end(JSON.stringify(objectPasswordFilter(user)))
+    return res.end(JSON.stringify(objectPasswordFilter(task)))
 }

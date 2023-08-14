@@ -5,18 +5,18 @@ const commonHeaders = {
     "Content-type": "application/json"
 }
 
-export async function deleteUsers (req, res) {
+export async function deleteTask (req, res) {
     const { id } = req.params
 
-    const users = await database.select("users")
+    const tasks = await database.select("tasks")
 
     if(
-        entityNotFound(req, res, users)
+        entityNotFound(req, res, tasks)
     ) {
         return
     }
 
-    database.delete('users', id)
+    database.delete('tasks', id)
 
-    return res.writeHead(204, "User deleted", commonHeaders).end()
+    return res.writeHead(204, "Task deleted", commonHeaders).end()
 }

@@ -45,5 +45,31 @@
             "updatedAt": "2023-08-14T04:08:23.131Z",
             "tokenKey": "a7189d5e950ccd56bc5b905a3b1570192348fe04a9a5139c5a16662381e6ccba"
         }
+    ],
+    "tasks": [
+        {
+            "id": "788c69e4-5cc9-4778-a74a-468386c8eed4",
+            "title": "Título teste",
+            "description": "Descrição teste",
+            "createdAt": "2023-08-14T14:02:53.627Z",
+            "updatedAt": null,
+            "completedAt": null
+        },
+        {
+            "id": "7562b675-e70e-48b8-9e50-afc6a5f0c8a9",
+            "title": "Título teste 2",
+            "description": "Descrição teste",
+            "createdAt": "2023-08-14T14:03:29.434Z",
+            "updatedAt": null,
+            "completedAt": null
+        },
+        {
+            "id": "6707b84a-5811-4d06-bb03-76f65afd6afe",
+            "title": "Terminar API",
+            "description": "Terminar api node rest",
+            "createdAt": "2023-08-14T14:21:48.714Z",
+            "updatedAt": "2023-08-14T14:22:05.138Z",
+            "completedAt": "2023-08-14T14:22:05.138Z"
+        }
     ]
 }

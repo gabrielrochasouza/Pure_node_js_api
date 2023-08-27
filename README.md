@@ -10,7 +10,7 @@
     $ npm run dev
 
  ```
- If this doesn't run this command instead:
+ If this command doesn't run the project, use this command instead:
  ```
 
     $ node src/server.js

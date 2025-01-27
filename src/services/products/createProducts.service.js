@@ -7,7 +7,7 @@ export async function createProducts(req, res) {
     const products = await database.select('products');
 
     if(
-        requiredFieldsMiddleware(req, res, ["name", "description", "category", "img_url"]) ||
+        requiredFieldsMiddleware(req, res, ["name", "description", "category", "img_url", "price"]) ||
         uniqueFieldRequiredMiddleware(req, res, products, "name")
     ) {
         return
@@ -15,10 +15,11 @@ export async function createProducts(req, res) {
 
     const newProduct = {
         id: randomUUID(),
-        name: req.body?.title,
+        name: req.body?.name,
         description: req.body?.description,
         category: req.body?.category,
         img_url: req.body?.img_url,
+        price: req.body?.price,
         createdAt: new Date(),
         updatedAt: null,
     }

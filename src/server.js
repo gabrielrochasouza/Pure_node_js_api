@@ -5,7 +5,11 @@ import { routes } from './routes.js'
 const server = http.createServer(async (req, res)=> {
     
     const { method, url } = req
-    await json(req)
+    await json(req);
+
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Permitir todas as origens
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Métodos permitidos
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Cabeçalhos permitidos
     
     const route = routes.find(route => {
         if (!route.path.includes(':')) {

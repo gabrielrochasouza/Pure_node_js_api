@@ -2,6 +2,7 @@ import { buildRoutePath } from './utils/buildRoutePath.js';
 import { usersController } from './controllers/users.controller.js';
 import { homePageMessage } from './consts/homePageMessage.js';
 import { tasksController } from './controllers/tasks.controller.js';
+import { productsController } from './controllers/products.controller.js';
 
 export const routes = [
     {
@@ -12,4 +13,5 @@ export const routes = [
     },
     ...usersController,
     ...tasksController,
+    ...productsController,
 ]

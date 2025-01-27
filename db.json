@@ -106,5 +106,39 @@
             "updatedAt": null,
             "completedAt": null
         }
+    ],
+    "products": [
+        {
+            "id": "71b6a399-368a-4940-884c-28acddef2512",
+            "description": "Sanduíche suculento, vem carne, ovo, alface, tomate, queijo, presunto e bacon",
+            "category": "Sanduíches",
+            "img_url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/85/f2/db/xtudo-duplo.jpg",
+            "createdAt": "2025-01-27T01:07:06.103Z",
+            "updatedAt": null
+        },
+        {
+            "id": "8ff12dce-e955-474b-945c-6a775349361a",
+            "description": "Sanduíche suculento, vem carne, ovo, alface, tomate, queijo, presunto e bacon",
+            "category": "Sanduíches",
+            "img_url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/85/f2/db/xtudo-duplo.jpg",
+            "createdAt": "2025-01-27T01:07:08.657Z",
+            "updatedAt": null
+        },
+        {
+            "id": "3d96fe11-59af-47fa-9f01-7964943829f2",
+            "description": "Sanduíche suculento, vem carne, queijo e bacon",
+            "category": "Sanduíches",
+            "img_url": "https://i.ytimg.com/vi/CJ5i7sFB3Do/maxresdefault.jpg",
+            "createdAt": "2025-01-27T01:10:46.714Z",
+            "updatedAt": null
+        },
+        {
+            "id": "2b8bbadd-21a3-4f57-8deb-5d21b477b494",
+            "description": "Milkshake delicioso de morango",
+            "category": "Milkshake",
+            "img_url": "https://images.mrcook.app/recipe-image/01909ced-6ebf-7711-ba8e-be263f42cccd",
+            "createdAt": "2025-01-27T01:12:35.615Z",
+            "updatedAt": null
+        }
     ]
 }

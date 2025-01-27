@@ -1,0 +1,45 @@
+### App is working message
+GET http://localhost:3000
+Content-Type: application/json
+
+
+### Show all products
+GET http://localhost:3000/products/
+Content-Type: application/json
+
+
+### Show one task
+GET http://localhost:3000/products/75cc25c3-219f-4bcb-9258-046da6bae897
+Content-Type: application/json
+
+
+### Create new task
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Milkshake de morango",
+  "category": "Milkshake",
+  "description": "Milkshake delicioso de morango",
+  "price": "14.00",
+  "img_url": "https://images.mrcook.app/recipe-image/01909ced-6ebf-7711-ba8e-be263f42cccd"
+}
+
+
+### Complete task
+PATCH http://localhost:3000/products/6707b84a-5811-4d06-bb03-76f65afd6afe/complete
+Content-Type: application/json
+
+
+### Update task
+PUT http://localhost:3000/products/f30275c2-041f-4dab-8b72-ccfccb557c7c
+Content-Type: application/json
+
+{
+    "title": "Testing PUT method",
+    "description": "Updated description"
+}
+
+
+### Delete task
+DELETE http://localhost:3000/products/f30275c2-041f-4dab-8b72-ccfccb557c7c

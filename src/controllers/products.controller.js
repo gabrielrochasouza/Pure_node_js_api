@@ -7,7 +7,7 @@ import { getProducts } from '../services/products/getProducts.service.js';
 export const productsController = [
     {
         method: 'GET',
-        path: '/products/:id',
+        path: '/product/:id',
         buildRoutePath: buildRoutePath('/products/:id'),
         handler: (req,res) => getOneProduct(req, res)
     },
@@ -25,7 +25,7 @@ export const productsController = [
     },
     {
         method: 'DELETE',
-        path: '/products/:id',
+        path: '/product/:id',
         buildRoutePath: buildRoutePath('/products/:id'),
         handler: (req,res) => deleteProduct(req, res)
     },
